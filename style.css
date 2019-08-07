@@ -1,0 +1,14 @@
+@include "Skeleton-2.0.4/css/skeleton.css"
+
+body {
+    margin: 20%;
+}
+
+div.success {
+    /*success green*/
+    background-color: #4bb543;
+}
+
+div.in-progress {
+    background-color: #b5434a;
+}
