@@ -140,12 +140,20 @@
 
         <script type="text/javascript">
 
-        function toggleClass() {
-            console.log("This will print to the screen if you press Control-Shift-I");
+
+        /* 
+        * Toggles the class of the parent node between 
+        * - success
+        * - in-progress
+        * Other classes the parent node may have are unaffected
+        */
+        function toggleParentClass() {
+            document.activeElement.parentNode.classList.toggle('success');
+            document.activeElement.parentNode.classList.toggle('in-progress');
         }
 
         window.onload = function() {
-            document.getElementById("done-button").addEventListener( 'click', toggleClass);
+            document.getElementById("done-button").addEventListener( 'click', toggleParentClass);
         }
 
         </script>
