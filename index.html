@@ -137,5 +137,17 @@
 
             <button>Done!</button>
         </div>
+
+        <script type="text/javascript">
+
+        function toggleClass() {
+            console.log("This will print to the screen if you press Control-Shift-I");
+        }
+
+        window.onload = function() {
+            document.getElementById("done-button").addEventListener( 'click', toggleClass);
+        }
+
+        </script>
     </body>
 </html>
