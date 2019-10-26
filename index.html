@@ -19,6 +19,119 @@
 
         Perform movements slowly and with 0 momentum.
 
+        <div class="in-progress">
+            <h1>Skin the cat</h1>
+
+            <button class="done-button">Done!</button>
+        </div>
+
+        <div class="in-progress">
+            <h1>Sissy squats</h1>
+
+            <button class="done-button">Done!</button>
+        </div>
+
+        <div class="in-progress">
+            <h1>Splits</h1>
+
+            <button class="done-button">Done!</button>
+        </div>
+
+        <div class="in-progress">
+            <h1>Back lever</h1>
+
+            <button class="done-button">Done!</button>
+        </div>
+
+        <div class="in-progress">
+            <h1>Front lever</h1>
+
+            <button class="done-button">Done!</button>
+        </div>
+
+        <div class="in-progress">
+            <h1>Tucked bent leg back lever</h1>
+
+            <button class="done-button">Done!</button>
+        </div>
+
+        <div class="in-progress">
+            <h1>Frog bent leg back lever</h1>
+
+            <button class="done-button">Done!</button>
+        </div>
+
+        <div class="in-progress">
+            <h1>Rope climb</h1>
+
+            <button class="done-button">Done!</button>
+        </div>
+
+        <div class="in-progress">
+            <h1>Yoga handstand (wall)</h1>
+
+            <button class="done-button">Done!</button>
+        </div>
+
+        <div class="in-progress">
+            <h1>Yoga handstand</h1>
+
+            <button class="done-button">Done!</button>
+        </div>
+
+        <div class="in-progress">
+            <h1>Back lever</h1>
+
+            <button class="done-button">Done!</button>
+        </div>
+
+        <div class="in-progress">
+            <h1>L sit rope climb</h1>
+
+            <button class="done-button">Done!</button>
+        </div>
+
+        <div class="in-progress">
+            <h1>Front limber</h1>
+
+            Perform a handstand. Slowly lean your legs backwards until you fall into a bridge.
+
+            <button class="done-button">Done!</button>
+        </div>
+
+        <div class="in-progress">
+            <h1>Reverse planks</h1>
+
+            Perform a handstand. Slowly lean your legs backwards until you fall into a bridge.
+
+            <button class="done-button">Done!</button>
+        </div>
+
+        <div class="success">
+            <h1>Hollow body hold</h1>
+
+
+            <button class="done-button">Done!</button>
+        </div>
+
+        <div class="in-progress">
+            <h1>Hollow body rock</h1>
+
+
+            <button class="done-button">Done!</button>
+        </div>
+
+        <div class="in-progress">
+            <h1>Reverse planche</h1>
+
+            <button class="done-button">Done!</button>
+        </div>
+
+        <div class="in-progress">
+            <h1>Dragon flag</h1>
+            <button class="done-button">Done!</button>
+        </div>
+
         <div class="success">
             <h1>Uneven squats</h1>
 
@@ -66,6 +179,12 @@
             <button class="done-button">Done!</button>
         </div>
 
+        <div class="in-progress">
+            <h1>Straddle planche lean</h1>
+
+            <button class="done-button">Done!</button>
+        </div>
+
         <div class="success">
             <h1>Hanging leg raises</h1>
 
@@ -101,13 +220,29 @@
         <div class="in-progress">
             <h1>Handstand</h1>
 
-            Perform a 30 second long handstand maintaining body perfectly straight and tense.
+            Kick up slowly to a controlled handstand maintaining body perfectly straight and tense for 30 seconds.
+
+            <button class="done-button">Done!</button>
+        </div>
+
+        <div class="success">
+            <h1>Wall handstand</h1>
+
+            Kick up to a handstand, allowing your feet to rest on a wall while keeping your body tense and straight, for 30 seconds.
+
+            <button class="done-button">Done!</button>
+        </div>
+
+        <div class="success">
+            <h1>Uneven push up</h1>
+
+            Do a regular push up with one hand on an elevated surface like a ball or stack of books.
 
             <button class="done-button">Done!</button>
         </div>
 
         <div class="in-progress">
-            <h1>Wide one arm push up (left)</h1>
+            <h1>Open leg one arm push up (left)</h1>
 
             Perform 3 repetitions with slow, solid form, legs open wide.
 
@@ -115,7 +250,7 @@
         </div>
 
         <div class="in-progress">
-            <h1>Wide one arm push up (right)</h1>
+            <h1>Open leg one arm push up (right)</h1>
 
             Perform 3 repetitions with slow, solid form, legs open wide.
 
@@ -141,24 +276,27 @@
         <script type="text/javascript">
 
 
-        /* 
-        * Toggles the class of the parent node between 
-        * - success
-        * - in-progress
-        * Other classes the parent node may have are unaffected
-        */
+/* 
+* Toggles the class of the parent node between 
+ * - success
+ * - in-progress
+ * Other classes the parent node may have are unaffected
+ */
         function toggleParentClass() {
             document.activeElement.parentNode.classList.toggle('success');
             document.activeElement.parentNode.classList.toggle('in-progress');
         }
 
-        window.onload = function() {
-            document.addEventListener( 'click', function (event) {
-                if (event.target.matches('.done-button')) {
-                    toggleParentClass();
-                }
-            }, false);
+window.onload = function() {
+    /*
+     * instead of getElementById, listen for click events anywhere on the page and only do something if the click is on a node with done-button class
+     */
+    document.addEventListener( 'click', function (event) {
+        if (event.target.matches('.done-button')) {
+            toggleParentClass();
         }
+    }, false);
+}
 
         </script>
     </body>
